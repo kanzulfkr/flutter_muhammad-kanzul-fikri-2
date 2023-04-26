@@ -329,18 +329,27 @@ class _MyHomePageState extends State<MyHomePage> {
                               context: context,
                               builder: (BuildContext context) {
                                 return AlertDialog(
-                                  title: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
+                                  title: Column(
                                     children: [
-                                      Text(contacts[0].firstName),
-                                      const SizedBox(width: 5),
-                                      Text(contacts[0].lastName)
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text(contacts[0].firstName),
+                                          const SizedBox(width: 5),
+                                          Text(contacts[0].lastName)
+                                        ],
+                                      ),
+                                      Text(
+                                        contacts[0].email,
+                                        style: TextStyle(fontSize: 13),
+                                      )
                                     ],
                                   ),
                                   content: Text(contacts[0].help),
                                   actions: <Widget>[
                                     TextButton(
-                                      child: const Text('Delete'),
+                                      child: const Text('Send your problem.'),
                                       onPressed: () {
                                         contacts.removeAt(0);
                                         Navigator.of(context).pop();
