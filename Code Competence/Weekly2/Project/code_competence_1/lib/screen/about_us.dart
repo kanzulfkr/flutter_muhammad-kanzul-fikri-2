@@ -53,25 +53,27 @@ class AboutUs extends StatelessWidget {
           ),
         ),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: const [
-          SizedBox(height: 50),
-          Text(
-            'Select the features below',
-            style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
-          ),
-          SizedBox(height: 10),
-          Icon(
-            Icons.arrow_drop_down_outlined,
-            size: 35,
-          ),
-          SizedBox(height: 25),
-          FitureOne(),
-          FitureTwo(),
-          FitureTree(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: const [
+            SizedBox(height: 50),
+            Text(
+              'Select the features below',
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
+            ),
+            SizedBox(height: 10),
+            Icon(
+              Icons.arrow_drop_down_outlined,
+              size: 35,
+            ),
+            SizedBox(height: 25),
+            FitureOne(),
+            FitureTwo(),
+            FitureTree(),
+          ],
+        ),
       ),
     );
   }
